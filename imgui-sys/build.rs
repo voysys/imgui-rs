@@ -67,6 +67,10 @@ fn main() -> std::io::Result<()> {
         for (key, value) in DEFINES.iter() {
             build.define(key, *value);
         }
+        #[cfg(feature = "u32_draw_index")]
+        build.define("ImDrawIdx", Some("unsigned int"));
+
+        build.flag_if_supported("-Wno-return-type-c-linkage");
 
         // Freetype font rasterizer feature
         #[cfg(feature = "freetype")]
