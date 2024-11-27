@@ -29,6 +29,7 @@ docking = ["imgui-sys/docking"]
 # this api is in beta in the upstream imgui crate. See issue #524 for more info.
 # it should be stable and fine to use though.
 tables-api = []
+u32_draw_index = ["imgui-sys/u32_draw_index"]
 
 [dev-dependencies]
 memoffset = "0.6"
